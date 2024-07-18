@@ -84,6 +84,11 @@ h2 {
     font-size: 30px;
 }
 
+#lives {
+    display: flex;
+    gap: 1rem;
+}
+
 .heart {
     width: 20px;
     height: 20px;
@@ -91,6 +96,14 @@ h2 {
 
 svg.heart path {
     fill: #dc1c26;
+}
+
+#next, #restart { 
+    width: 100%;
+    margin-top: 1rem;
+    min-height: 110px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .hidden {
