@@ -208,6 +208,7 @@ let question
 let options
 let round = 1
 let lives = 3
+let gameCategory
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -248,6 +249,19 @@ function getRandomCountry() {
 function capitalCity() {
     question = getRandomCountry()
     options = []
+    const correctCapital = question.capital
+    questionEl.innerHTML = `What is the capital city of <strong>${question.country}?</strong>`
+    options.push(correctCapital)
+
+    while (options.length < 4) {
+        let randomCapital = getRandomCountry()
+
+        if (!options.includes(randomCapital.capital) && randomCapital.capital !== correctCapital) {
+            options.push(randomCapital.capital)
+        }
+    }
+
+    options.sort(() => Math.random() - 0.5)
 }
 
 function continent() {
@@ -257,4 +271,7 @@ function continent() {
 
 /*----------------------------- Event Listeners -----------------------------*/
 
+categoryBtnsEl.forEach((category) => {
+    category.addEventListener(`click`, startGame)
+})
 
