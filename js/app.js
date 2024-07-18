@@ -227,7 +227,11 @@ const roundsEl = document.getElementById(`rounds`)
 
 /*-------------------------------- Functions --------------------------------*/
 
-function startGame() {
+function startGame(event) {
+    gameCategory = event.target.closest(`.game-category`).id
+
+    categoryContainer.classList.add('hidden')
+
     nextRound()
 }
 
@@ -238,6 +242,15 @@ function nextRound() {
     } else if (gameCategory === `continent`) {
         continent()
     }
+
+    optionsEl.innerHTML = ``
+
+    roundsEl.classList.remove(`hidden`)
+    roundsEl.textContent = `Round: ${round}/${totalRounds}`
+    round++
+
+    livesEl.classList.remove(`hidden`)
+    nextBtnEl.classList.add('hidden')
 }
 
 function getRandomCountry() {
@@ -262,10 +275,26 @@ function capitalCity() {
     }
 
     options.sort(() => Math.random() - 0.5)
+
+    options.forEach((option) => {
+        const button = document.createElement('button')
+        button.textContent = option
+        if (option === correctCapital) {
+           
+        }
+    })
 }
 
 function continent() {
 
+}
+
+function selectedCorrectAnswer() {
+
+}
+
+function selectedIncorrectAnswer() {
+    
 }
 
 
