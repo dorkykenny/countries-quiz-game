@@ -239,6 +239,11 @@ function nextRound() {
     }
 }
 
+function getRandomCountry() {
+    const randomIndex = Math.floor(Math.random() * countries.length)
+    return countries[randomIndex]
+}
+
 
 function capitalCity() {
     question = getRandomCountry()
