@@ -233,14 +233,24 @@ const roundsEl = document.getElementById(`rounds`)
 
 /*-------------------------------- Functions --------------------------------*/
 
+function homepage() {
+    categoryContainer.classList.remove(`hidden`)
+    gameContainer.classList.add(`hidden`)
+    resultEl.innerHTML = ``
+    lives = initialLives
+    round = 1
+    
+    checkForLives()
+}
+
 function startGame(event) {
     gameCategory = event.target.closest(`.game-category`).id
 
     categoryContainer.classList.add('hidden')
     gameContainer.classList.remove(`hidden`)
     gameInfoEl.classList.remove(`hidden`)
-
-
+    restartBtnEl.classList.add(`hidden`)
+    
     nextRound()
 }
 
@@ -377,3 +387,5 @@ categoryBtnsEl.forEach((category) => {
 })
 
 nextBtnEl.addEventListener(`click`, nextRound)
+
+restartBtnEl.addEventListener(`click`, homepage)
