@@ -318,6 +318,7 @@ function selectedCorrectAnswer() {
         }
     })
 
+    checkForLives()
 }
 
 function selectedIncorrectAnswer() {
@@ -335,17 +336,21 @@ function selectedIncorrectAnswer() {
             option.classList.add('show-incorrect-answer')
         }
     })
+
+    checkForLives()
 }
 
 function checkForLives() {
     if (lives === 3) {
-        
+        heart1El.classList.remove(`hidden`)
+        heart2El.classList.remove(`hidden`)
+        heart3El.classList.remove(`hidden`)
     } else if (lives === 2) {
-
+        heart3El.classList.add(`hidden`)
     } else if (lives === 1) {
-
+        heart2El.classList.add(`hidden`)
     } else {
-
+        heart1El.classList.add(`hidden`)
     }
 }
 
