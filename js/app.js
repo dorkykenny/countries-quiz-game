@@ -297,10 +297,36 @@ function continent() {
 
 function selectedCorrectAnswer() {
     nextBtnEl.classList.remove(`hidden`)
+
+    const buttons = document.querySelectorAll('.option')
+
+    buttons.forEach((option) => {
+        option.disabled = true
+        if (option.classList.contains('correct-answer')) {
+            option.classList.add('show-correct-answer')
+        } else {
+            option.classList.contains('incorrect-answer')
+            option.classList.add('show-incorrect-answer')
+        }
+    })
+
 }
 
 function selectedIncorrectAnswer() {
     nextBtnEl.classList.remove(`hidden`)
+    lives--
+
+    const buttons = document.querySelectorAll('.option')
+
+    buttons.forEach((option) => {
+        option.disabled = true
+        if (option.classList.contains('correct-answer')) {
+            option.classList.add('show-correct-answer')
+        } else {
+            option.classList.contains('incorrect-answer')
+            option.classList.add('show-incorrect-answer')
+        }
+    })
 }
 
 
