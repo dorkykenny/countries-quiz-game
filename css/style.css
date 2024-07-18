@@ -22,6 +22,9 @@ h2 {
     align-items: center;
     width: 100%;
     background-color: #d1d1d1;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 #question {
@@ -35,6 +38,19 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-top: 10px;
+}
+
+#options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0 1rem;
+}
+
+.option {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 30px;
 }
 
 .heart {
