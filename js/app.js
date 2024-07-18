@@ -217,7 +217,6 @@ const categoryContainer = document.querySelector(`.category-container`)
 const gameContainer = document.querySelector(`.game-container`)
 const questionEl = document.getElementById(`question`)
 const optionsEl = document.getElementById(`options`)
-const feedbackEl = document.getElementById(`feedback`)
 const resultEl = document.getElementById(`result`)
 const restartBtnEl = document.getElementById(`restart`)
 const nextBtnEl = document.getElementById(`next`)
@@ -329,6 +328,17 @@ function selectedIncorrectAnswer() {
     })
 }
 
+function checkForLives() {
+    if (lives === 3) {
+        
+    } else if (lives === 2) {
+
+    } else if (lives === 1) {
+
+    } else {
+        
+    }
+}
 
 /*----------------------------- Event Listeners -----------------------------*/
 
