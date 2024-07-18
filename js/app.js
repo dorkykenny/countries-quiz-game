@@ -296,11 +296,11 @@ function continent() {
 }
 
 function selectedCorrectAnswer() {
-
+    nextBtnEl.classList.remove(`hidden`)
 }
 
 function selectedIncorrectAnswer() {
-
+    nextBtnEl.classList.remove(`hidden`)
 }
 
 
