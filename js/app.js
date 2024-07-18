@@ -319,6 +319,7 @@ function selectedCorrectAnswer() {
     })
 
     checkForLives()
+    checkForWin()
 }
 
 function selectedIncorrectAnswer() {
@@ -338,6 +339,7 @@ function selectedIncorrectAnswer() {
     })
 
     checkForLives()
+    checkForWin()
 }
 
 function checkForLives() {
@@ -351,6 +353,20 @@ function checkForLives() {
         heart2El.classList.add(`hidden`)
     } else {
         heart1El.classList.add(`hidden`)
+    }
+}
+
+function checkForWin() {
+    if (lives === 0) {
+        nextBtnEl.classList.add(`hidden`)
+        resultEl.innerHTML = '<p>BETTER LUCK NEXT TIME!</p>'
+        restartBtnEl.classList.remove(`hidden`)
+    }
+
+    if (round > totalRounds) {
+        nextBtnEl.classList.add(`hidden`)
+        resultEl.innerHTML = `<p>YOU WIN!</p>`
+        restartBtnEl.classList.remove(`hidden`)
     }
 }
 
