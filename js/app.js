@@ -214,13 +214,20 @@ let gameCategory
 
 const categoryBtnsEl = document.querySelectorAll(`.game-category`)
 const categoryContainer = document.querySelector(`.category-container`)
+
 const gameContainer = document.querySelector(`.game-container`)
 const questionEl = document.getElementById(`question`)
 const optionsEl = document.getElementById(`options`)
-const resultEl = document.getElementById(`result`)
+
 const restartBtnEl = document.getElementById(`restart`)
 const nextBtnEl = document.getElementById(`next`)
+const resultEl = document.getElementById(`result`)
+
+const gameInfoEl = document.querySelector(`.game-info`)
 const livesEl = document.getElementById(`lives`)
+const heart1El = document.querySelector(`.heart-1`)
+const heart2El = document.querySelector(`.heart-2`)
+const heart3El = document.querySelector(`.heart-3`)
 const roundsEl = document.getElementById(`rounds`)
 
 
@@ -231,6 +238,8 @@ function startGame(event) {
 
     categoryContainer.classList.add('hidden')
     gameContainer.classList.remove(`hidden`)
+    gameInfoEl.classList.remove(`hidden`)
+
 
     nextRound()
 }
@@ -336,7 +345,7 @@ function checkForLives() {
     } else if (lives === 1) {
 
     } else {
-        
+
     }
 }
 

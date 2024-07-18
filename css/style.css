@@ -13,6 +13,15 @@ h2 {
     text-align: center;
 }
 
+.heart {
+    width: 20px;
+    height: 20px;
+}
+
+svg.heart path {
+    fill: #dc1c26;
+}
+
 .hidden {
     display: none;
 }
