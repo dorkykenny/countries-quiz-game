@@ -250,7 +250,7 @@ function startGame(event) {
     gameContainer.classList.remove(`hidden`)
     gameInfoEl.classList.remove(`hidden`)
     restartBtnEl.classList.add(`hidden`)
-    
+
     nextRound()
 }
 
@@ -310,7 +310,34 @@ function capitalCity() {
 }
 
 function continent() {
+    question = getRandomCountry()
+    options = []
+    const correctContinent = question.continent
+    questionEl.textContent = `What continent is ${question.country} in?`
+    options.push(correctContinent)
 
+    while (options.length < 4) {
+        let randomContinent = getRandomCountry()
+
+        if (!options.includes(randomContinent.continent) && randomContinent.continent !== correctContinent) {
+            options.push(randomContinent.continent)
+        }
+    }
+
+    options.sort(() => Math.random() - 0.5)
+   
+    options.forEach((option) => {
+        const button = document.createElement('button')
+        button.textContent = option
+        if (option === correctContinent) {
+            button.addEventListener('click', selectedCorrectAnswer)
+            button.classList.add('option', 'correct-answer')
+        } else {
+            button.addEventListener('click', selectedIncorrectAnswer)
+            button.classList.add('option', 'incorrect-answer')
+        }
+        optionsEl.appendChild(button)
+    })
 }
 
 function selectedCorrectAnswer() {
