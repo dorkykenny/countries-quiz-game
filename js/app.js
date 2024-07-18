@@ -211,6 +211,17 @@ let lives = 3
 
 /*------------------------ Cached Element References ------------------------*/
 
+const categoryBtnsEl = document.querySelectorAll(`.game-category`)
+const categoryContainer = document.querySelector(`.category-container`)
+const gameContainer = document.querySelector(`.game-container`)
+const questionEl = document.getElementById(`question`)
+const optionsEl = document.getElementById(`options`)
+const feedbackEl = document.getElementById(`feedback`)
+const resultEl = document.getElementById(`result`)
+const restartBtnEl = document.getElementById(`restart`)
+const nextBtnEl = document.getElementById(`next`)
+const livesEl = document.getElementById(`lives`)
+const roundsEl = document.getElementById(`rounds`)
 
 
 /*-------------------------------- Functions --------------------------------*/
