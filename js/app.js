@@ -231,18 +231,13 @@ function startGame(event) {
     gameCategory = event.target.closest(`.game-category`).id
 
     categoryContainer.classList.add('hidden')
+    gameContainer.classList.remove(`hidden`)
 
     nextRound()
 }
 
 
 function nextRound() {
-    if (gameCategory === `capital-city`) {
-        capitalCity()
-    } else if (gameCategory === `continent`) {
-        continent()
-    }
-
     optionsEl.innerHTML = ``
 
     roundsEl.classList.remove(`hidden`)
@@ -251,6 +246,12 @@ function nextRound() {
 
     livesEl.classList.remove(`hidden`)
     nextBtnEl.classList.add('hidden')
+
+    if (gameCategory === `capital-city`) {
+        capitalCity()
+    } else if (gameCategory === `continent`) {
+        continent()
+    }
 }
 
 function getRandomCountry() {
@@ -275,13 +276,18 @@ function capitalCity() {
     }
 
     options.sort(() => Math.random() - 0.5)
-
+   
     options.forEach((option) => {
         const button = document.createElement('button')
         button.textContent = option
         if (option === correctCapital) {
-           
+            button.addEventListener('click', selectedCorrectAnswer)
+            button.classList.add('option', 'correct-answer')
+        } else {
+            button.addEventListener('click', selectedIncorrectAnswer)
+            button.classList.add('option', 'incorrect-answer')
         }
+        optionsEl.appendChild(button)
     })
 }
 
@@ -294,7 +300,7 @@ function selectedCorrectAnswer() {
 }
 
 function selectedIncorrectAnswer() {
-    
+
 }
 
 
