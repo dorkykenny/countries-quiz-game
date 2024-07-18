@@ -226,7 +226,28 @@ const roundsEl = document.getElementById(`rounds`)
 
 /*-------------------------------- Functions --------------------------------*/
 
+function startGame() {
+    nextRound()
+}
 
+
+function nextRound() {
+    if (gameCategory === `capital-city`) {
+        capitalCity()
+    } else if (gameCategory === `continent`) {
+        continent()
+    }
+}
+
+
+function capitalCity() {
+    question = getRandomCountry()
+    options = []
+}
+
+function continent() {
+
+}
 
 
 /*----------------------------- Event Listeners -----------------------------*/
