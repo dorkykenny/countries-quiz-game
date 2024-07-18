@@ -12,17 +12,25 @@
 <body>
     <h1>Countries Quiz</h1>
     <div class="category-container">
-    <h2>Categories:</h2>
-    <div class="category-container--buttons">
-        <button id="capital-city" class="game-category">Guess the <span>🏛️ Capital City 🏛️</span></button>
-        <button id="continent" class="game-category">Guess the <span>🗾 Continent 🗾</span></button>
+        <h2>Categories:</h2>
+        <div class="category-container--buttons">
+            <button id="capital-city" class="game-category">Guess the <span>🏛️ Capital City 🏛️</span></button>
+            <button id="continent" class="game-category">Guess the <span>🗾 Continent 🗾</span></button>
+        </div>
     </div>
-</div>
-    <div id="question"></div>
-    <div id="options"></div>
-    <div id="feedback"></div>
-    <div id="next"></div>
-    <div id="result"></div>
+    <div class="game-container">
+        <div class="game-info">
+            <p id="rounds" class="hidden"></p>
+            <div id="lives" class="hidden">
+            </div>
+        </div>
+        <div id="question"></div>
+        <div id="options"></div>
+        <div id="feedback"></div>
+        <div id="next"></div>
+        <div id="result"></div>
+        <button id="restart" class="hidden">Restart</button>
+    </div>
 </body>
 
 </html>
