@@ -2,6 +2,7 @@ body {
     box-sizing: border-box;
     max-width: 600px;
     margin: 0 auto;
+    font-family: Helvetica, sans-serif;
 }
 
 h1 {
@@ -11,6 +12,19 @@ h1 {
 
 h2 {
     text-align: center;
+}
+
+#question {
+    font-size: 22px;
+    text-align: center;
+}
+
+#question strong {
+    font-size: 30px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 10px;
 }
 
 .heart {
