@@ -310,3 +310,4 @@ categoryBtnsEl.forEach((category) => {
     category.addEventListener(`click`, startGame)
 })
 
+nextBtnEl.addEventListener(`click`, nextRound)
