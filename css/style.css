@@ -51,6 +51,17 @@ h2 {
     font-size: 18px;
     font-weight: 600;
     padding: 30px;
+    cursor: pointer;
+}
+
+.show-correct-answer {
+    background-color: green;
+    color: white;
+}
+
+.show-incorrect-answer {
+    background-color: rgb(157, 8, 8);
+    color: white
 }
 
 .heart {
