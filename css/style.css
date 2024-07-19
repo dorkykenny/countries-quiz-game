@@ -15,7 +15,7 @@ h1 {
 
 h2 {
     text-align: center;
-    color: #112A46; 
+    color: #112A46;
     text-transform: uppercase;
     font-family: Helvetica, system-ui, sans-serif;
 }
@@ -126,7 +126,8 @@ svg.heart path {
     fill: #dc1c26;
 }
 
-#next, #restart { 
+#next,
+#restart {
     width: 100%;
     margin-top: 1rem;
     min-height: 110px;
