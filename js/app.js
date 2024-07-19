@@ -406,7 +406,7 @@ function checkForLives() {
 }
 
 function checkForWin() {
-    if (lives < 0) {
+    if (lives === 0) {
         nextBtnEl.classList.add(`hidden`)
         resultEl.innerHTML = '<p>BETTER LUCK NEXT TIME!</p>'
         restartBtnEl.classList.remove(`hidden`)

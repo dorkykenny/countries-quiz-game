@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-    font-size: 45px;
+    font-size: 35px;
     text-align: center;
     color: #112A46;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -31,9 +31,10 @@ h3 {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     align-items: center;
     width: 100%;
+    height: 20px;
     background-color: white;
     color: #112A46;
     font-size: 18px;
@@ -42,14 +43,14 @@ h3 {
 }
 
 #question {
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
     color: #112A46;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 #question strong {
-    font-size: 30px;
+    font-size: 25px;
     color: #112A46;
     display: block;
     text-transform: uppercase;
@@ -67,7 +68,7 @@ h3 {
 
 .option {
     font-size: 18px;
-    padding: 30px;
+    padding: 25px;
     cursor: pointer;
 }
 
@@ -78,7 +79,8 @@ h3 {
 .show-correct-answer {
     background-color: green;
     color: white;
-    font-size: 25px;
+    font-size: 18px;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
@@ -130,7 +132,7 @@ svg.heart path {
 #restart {
     width: 100%;
     margin-top: 1rem;
-    min-height: 110px;
+    min-height: 90px;
     font-size: 20px;
     cursor: pointer;
     font-size: 16px;
@@ -143,7 +145,7 @@ svg.heart path {
     text-transform: uppercase;
     font-weight: bold;
     color: #112A46;
-    font-size: 35px;
+    font-size: 25px;
     padding: 2px;
     -webkit-text-stroke: 1px black;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
