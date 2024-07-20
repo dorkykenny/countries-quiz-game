@@ -6,7 +6,7 @@ It is a game where you guess the details of countries like its capital or which 
 
 The game can be accessed [here]. Initially, players will be prompted to pick a category. Once one is clicked, the first question immediately pops up, along with 4 option buttons below. 
 
-The planning materials in building this game can be accessed on this link.
+The planning materials in building this game can be accessed on this [link].
 
 ### Technologies Used:
 
@@ -26,5 +26,5 @@ The planning materials in building this game can be accessed on this link.
 
 [here]: https://dorkykenny.github.io/countries-quiz-game/
 
-[link]: 
+[link]: https://github.com/dorkykenny/countries-quiz-game/blob/main/projectPlanning.md
 

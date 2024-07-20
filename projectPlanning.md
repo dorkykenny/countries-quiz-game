@@ -52,6 +52,7 @@
 
 In the category function, access the getRandomCountry function and reference it as the question. Set options to an empty array. Push the correct answer to the options array. Do a loop that would get 3 random countries as the wrong answer options and push those to the options array as well.
 
+
 - Make buttons for elements in the options array and add event listeners to them
 
 - Add classes to the options separating the correct answer and incorrect answers 
